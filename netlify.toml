@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build:web"
+  publish = "web-build"
+
+  [build.environment]
+    NODE_VERSION = "20"
+
+# SPA fallback (same rule as netlify/_redirects, applied at deploy time)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
